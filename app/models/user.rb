@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :articles, class_name: 'Post', foreign_key: 'author_id'
+
   validates :name, :email, :password, presence: true
   validates :bio, length: {maximum: 500}
   validates :location, length: {maximum: 20}
