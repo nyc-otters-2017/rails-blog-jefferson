@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :posts, shallow: true do
-    resources :comments, except: [:index, :new, :edit, :show]
+    resources :comments, only: [:create, :update, :destroy]
   end
 
   root 'posts#index'
