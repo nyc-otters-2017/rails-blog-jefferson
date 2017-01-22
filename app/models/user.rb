@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_many :articles, class_name: 'Post', foreign_key: 'author_id'
+  has_many :comments, as: :commentable
 
   validates :name, :email, :password, presence: true
   validates :bio, length: {maximum: 500}
