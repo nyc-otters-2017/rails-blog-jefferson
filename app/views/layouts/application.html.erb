@@ -8,6 +8,18 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+<header>
+  <%= link_to 'Home', root_path %>
+  <% if logged_in? %>
+    <%= link_to 'Profile', current_user %>
+    <%= link_to 'Logout', logout_path, method: 'delete' %>
+    <%= link_to 'New article', new_post_path %>
+  <% else %>
+    <%= link_to 'Sign up', new_user_path %>
+    <%= link_to 'Log in', login_path %>
+  <% end %>
+</header>
+
   <body>
     <%= yield %>
   </body>
