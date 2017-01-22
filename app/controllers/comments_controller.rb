@@ -1,14 +1,5 @@
 class CommentsController < ApplicationController
 
-  def index
-    post = Post.find(params[:post_id])
-    @comments = post.comments
-  end
-
-  def new
-    @comment = Comment.new
-  end
-
   def create
     post = Post.all(params[:id])
     @comment = post.comments.new(comment_params)
@@ -19,14 +10,6 @@ class CommentsController < ApplicationController
     else
       render 'new'
     end
-  end
-
-  def show
-    @comment = Comment.find(params[:id])
-  end
-
-  def edit
-    @comment = Comment.find(params[:id])
   end
 
   def update
