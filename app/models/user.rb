@@ -5,7 +5,7 @@ class User < ApplicationRecord
   validates :bio, length: {maximum: 500}
   validates :location, length: {maximum: 20}
   validates :password, length: {in: 8..20}
-
+  has_secure_password
   validate :valid_email
 
   def valid_email
