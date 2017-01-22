@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
 
-  # def current_user
-  #   return unless session[:user_id]
-  #   @current_user ||= User.find(session[:user_id])
-  # end
+  def current_user
+    return unless session[:user_id]
+    @current_user ||= User.find(session[:user_id])
+  end
 
   def index
     @users = User.all
@@ -50,7 +50,7 @@ class UsersController < ApplicationController
 
   private
     def user_params
-      params.require(:user).permit(:name, :bio, :location, :email, :password_digest)
+      params.require(:user).permit(:name, :bio, :location, :email, :password)
     end
 
 end
