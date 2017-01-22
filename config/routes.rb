@@ -5,8 +5,15 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
 
+  concern :commentable do
+    resources :comments
+  end
+
   resources :users
-  resources :posts
+  resources :posts, shallow: true do
+    resources :comments
+  end
 
   root 'posts#index'
+  
 end
