@@ -1,0 +1,5 @@
+<% @users.each do |user| %>
+  <%= link_to user.name, user_path(user.id) %>
+  <%= user.location %>
+  <%= user.bio == '' ? 'I like to remain mysterious' : user.bio.ljust(15).strip.concat('...')%>
+<% end %>
