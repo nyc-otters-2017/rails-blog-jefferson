@@ -10,7 +10,7 @@
 
 <header>
   <%= link_to 'Home', users_path %>
-  <% if current_user %>
+  <% if logged_in? %>
     <%= link_to 'Profile', current_user %>
     <%= link_to 'Logout', logout_path, method: 'delete' %>
   <% else %>
