@@ -1,5 +1,7 @@
 <% @users.each do |user| %>
-  <%= link_to user.name, user_path(user.id) %>
-  <%= user.location %>
-  <%= user.bio == '' ? 'I like to remain mysterious' : user.bio.ljust(15).strip.concat('...')%>
+  <ul>
+    <h3><%= link_to user.name, user_path(user.id) %></h3>
+    <li><%= user.articles.count %></li>
+    <li><%= "Member since  #{user.created_at.strftime("%b %d '%y")}" %></li>
+  </ul>
 <% end %>
