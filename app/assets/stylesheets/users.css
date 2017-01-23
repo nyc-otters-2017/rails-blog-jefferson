@@ -33,3 +33,12 @@
 .user-form input[type=submit] {
   margin-left: 40%;
 }
+
+.login {
+  height: 200px;
+}
+
+.login input[type=submit] {
+  margin-top: 6%;
+  margin-left: 43%;
+}
