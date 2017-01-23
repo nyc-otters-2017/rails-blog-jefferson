@@ -4,7 +4,7 @@
   <p>Member for <%= time_ago_in_words(@user.created_at) %></p>
 </div>
 
-<div class="user-container user-show">
+<div class="user-container user-show about-me">
   <p>About me:</p>
   <p><%= @user.bio.empty? ? "This user hasn't entered a bio yet." : @user.bio %></p>
 </div>
