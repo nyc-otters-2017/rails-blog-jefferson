@@ -1,15 +1,22 @@
-<% if @post.errors.any? %>
-  <%= pluralize(@post.errors.count, "error") %> prohibited
-  this post from being saved:
-  <% @post.errors.full_messages.each do |msg| %>
-    <%= msg %>
-  <% end %>
-<% end %>
+<div class="form-container">
 
-<%= form_for @post do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :article %>
-  <%= f.text_area :article %>
-  <%= f.submit %>
-<% end %>
+  <div class="error-container">
+    <% if @post.errors.any? %>
+      <%= pluralize(@post.errors.count, "error") %> prohibited
+      this post from being saved:
+      <% @post.errors.full_messages.each do |msg| %>
+        <%= msg %>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="form-container">
+    <%= form_for @post do |f| %>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+      <%= f.label :article %>
+      <%= f.text_area :article, cols: "100", rows: "40" %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>

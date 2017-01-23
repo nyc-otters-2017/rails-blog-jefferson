@@ -29,3 +29,34 @@ body {
   margin-left: 3%;
   padding-top: 1%;
 }
+
+.form-container {
+  background-color: #3D5440;
+  font-family: 'Raleway', sans-serif;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.form-container label {
+  display: block;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
+#post-article {
+  border-radius: 5px;
+  border: none;
+}
+
+.form-container input[type=submit] {
+  border: none;
+  width: 621px;
+  height: 80px;
+  border-radius: 5px;
+  background-color: #c1c1c1;
+  font-family: 'Raleway', sans-serif;
+  font-size: 40pt;
+  box-shadow: 4px 4px 13px rgba(0, 0, 0, 0.76);
+}
