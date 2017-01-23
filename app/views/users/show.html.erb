@@ -8,3 +8,5 @@
   <p>About me:</p>
   <p><%= @user.bio.empty? ? "This user hasn't entered a bio yet." : @user.bio %></p>
 </div>
+
+<%= link_to 'Edit profile', edit_user_path if current_user == @user %>
