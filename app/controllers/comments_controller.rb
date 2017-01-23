@@ -1,15 +1,19 @@
 class CommentsController < ApplicationController
 
   def create
-    post = Post.all(params[:id])
-    @comment = post.comments.new(comment_params)
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.new(comment_params)
     @comment.user_id = current_user.id
 
     if @comment.save
-      redirect_to @comment
+      redirect_to @post
     else
       render 'new'
     end
+  end
+
+  def edit
+    @comment = Comment.find(params[:id])
   end
 
   def update

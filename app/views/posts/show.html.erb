@@ -6,9 +6,7 @@
   <%= link_to 'Delete', post_path(@post), method: 'delete' %>
 <% end %>
 
-<% @post.comments.each do |comment| %>
-  <%= render 'comments/show' %>
-<% end %>
+  <%= render @post.comments %>
 
 <% if logged_in? %>
   <h2>New Comment</h2>
