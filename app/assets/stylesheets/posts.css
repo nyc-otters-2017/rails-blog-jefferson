@@ -59,3 +59,14 @@ body {
 .comments {
   border-bottom: 1px solid #6E0500;
 }
+
+.edit_comment {
+  font-family: 'Raleway', sans-serif;
+  margin: 10%;
+  padding: 10%;
+}
+
+.edit-comment * {
+  display: block;
+  margin-left: 10%;
+}
