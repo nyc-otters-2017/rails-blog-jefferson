@@ -1,0 +1,19 @@
+body {
+  background-color: #C1C1C1;
+}
+
+.posts-container {
+  border-bottom: 2px solid #6E0500;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20pt;
+  padding-left: 30%;
+  padding-top: 2%;
+}
+
+.posts-container a, .posts-container a:visited {
+  color: #6E0500;
+}
+
+.post-container {
+  padding-bottom: 3%;
+}

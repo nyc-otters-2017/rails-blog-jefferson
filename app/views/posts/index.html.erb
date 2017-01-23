@@ -1,4 +1,8 @@
-<% @posts.each do |post| %>
-  <p><%= link_to post.title, post_path(post.id) %></p>
-  <p><%= link_to post.author.name, user_path(post.author.id) %></p>
-<% end %>
+<section class="posts-container">
+  <% @posts.each do |post| %>
+    <article class="post-container">
+      <p><%= link_to post.title, post_path(post.id) %></p>
+      <p><%= link_to post.author.name, user_path(post.author.id) %></p>
+    </article>
+  <% end %>
+</section>
