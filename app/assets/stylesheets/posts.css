@@ -17,3 +17,15 @@ body {
 .post-container {
   padding-bottom: 3%;
 }
+
+.article-container {
+  font-family: 'Raleway', sans-serif;
+  line-height: 2;
+  margin-left: 9%;
+  margin-right: 9%;
+}
+
+.comments-container {
+  margin-left: 3%;
+  padding-top: 1%;
+}
