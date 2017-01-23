@@ -9,11 +9,9 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  get 'posts/:post_id/comments/:id/edit' => 'comments#edit'
-
   resources :users
-  resources :posts, shallow: true do
-    resources :comments, only: [:create, :update, :destroy]
+  resources :posts do
+    resources :comments, only: [:create, :edit, :update, :destroy]
   end
 
   root 'posts#index'

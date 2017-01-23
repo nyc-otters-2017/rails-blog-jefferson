@@ -17,10 +17,11 @@ class CommentsController < ApplicationController
   end
 
   def update
+    @post = Post.find([params[:post_id]])
     @comment = Comment.find(params[:id])
 
     if @comment.update(comment_params)
-      redirect_to @comment
+      redirect_to @post
     else
       render 'new'
     end

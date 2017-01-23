@@ -2,6 +2,6 @@
 <%= comment.comment %>
 
 <% if current_user == comment.user %>
-  <%= link_to 'Edit', "/posts/#{@post.id}/comments/#{comment.id}/edit" %>
-  <%= link_to 'Delete', comment_path(comment), method: 'delete' %>
+  <%= link_to 'Edit', edit_post_comment_path(@post) %>
+  <%= link_to 'Delete', post_comment_path(comment), method: 'delete' %>
 <% end %>
