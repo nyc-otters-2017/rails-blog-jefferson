@@ -1,0 +1,18 @@
+header {
+  padding: 3%;
+  background-color: #2A2A90;
+}
+
+header a {
+  color: #4F4FAA;
+  font-family: 'Dosis', sans-serif;
+  font-size: 20pt;
+}
+
+header a:hover {
+  color: #494962;
+}
+
+header a:not(:first-child) {
+  padding-left: 5em;
+}
