@@ -55,3 +55,7 @@ body {
   font-size: 40pt;
   box-shadow: 4px 4px 13px rgba(0, 0, 0, 0.76);
 }
+
+.comments {
+  border-bottom: 1px solid #6E0500;
+}

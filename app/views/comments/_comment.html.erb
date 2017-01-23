@@ -1,9 +1,12 @@
-<ul>
-  <li><%= comment.user.name %></li>
-  <li><%= comment.comment %></li>
+<div class="comments">
+
+  <p><%= comment.user.name %></p>
+  <p><%= comment.comment %></p>
+  <p><%= time_ago_in_words(comment.created_at) %></p>
 
   <% if current_user == comment.user %>
-    <li><%= link_to 'Edit', edit_post_comment_path(@post) %></li>
-    <li><%= link_to 'Delete', post_comment_path(comment), method: 'delete' %></li>
+    <span><%= link_to 'Edit', edit_post_comment_path(@post) %></span>
+    <span><%= link_to 'Delete', post_comment_path(comment), method: 'delete' %></span>
   <% end %>
-</ul>
+
+</div>
