@@ -1,0 +1,14 @@
+.users-container {
+  font-family: 'Raleway', sans-serif;
+  margin-left: 10%;
+  margin-right: 10%
+}
+
+.user-container {
+  border-bottom: 1px solid #6E0500;
+  padding-left: 40%;
+}
+
+.user-container a, .user-container a:visited {
+  color: #6E0500;
+}

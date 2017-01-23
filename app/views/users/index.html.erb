@@ -1,7 +1,11 @@
+<div class="users-container">
+
 <% @users.each do |user| %>
-  <ul>
+<div class="user-container">
     <h3><%= link_to user.name, user_path(user.id) %></h3>
-    <li><%= user.articles.count %></li>
-    <li><%= "Member since  #{user.created_at.strftime("%b %d '%y")}" %></li>
-  </ul>
+    <p><%= pluralize(user.articles.count, 'post') %></p>
+    <p>Member for <%= time_ago_in_words(user.created_at) %></p>
+</div>
 <% end %>
+
+</div>
