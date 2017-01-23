@@ -12,5 +12,5 @@
   <h2>New Comment</h2>
   <%= render 'comments/form' %>
 <% else %>
-  <h2><% link_to 'Login', new_user_path %> to leave a new comment</h2>
+  <h2><%= link_to 'Login', new_user_path %> to leave a new comment</h2>
 <% end %>
