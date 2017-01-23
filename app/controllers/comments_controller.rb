@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
 
   def create
+    require_user
     @post = Post.find(params[:post_id])
     @comment = @post.comments.new(comment_params)
     @comment.user_id = current_user.id
@@ -13,10 +14,12 @@ class CommentsController < ApplicationController
   end
 
   def edit
+    require_user
     @comment = Comment.find(params[:id])
   end
 
   def update
+    require_user
     @post = Post.find([params[:post_id]])
     @comment = Comment.find(params[:id])
 
@@ -28,6 +31,7 @@ class CommentsController < ApplicationController
   end
 
   def destroy
+    require_user
     @comment = Comment.find(params[:id])
     @comment.destroy
     redirect_to post_comments_path

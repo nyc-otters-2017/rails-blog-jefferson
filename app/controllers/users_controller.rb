@@ -24,10 +24,12 @@ class UsersController < ApplicationController
   end
 
   def edit
+    require_user
     @user = User.find(params[:id])
   end
 
   def update
+    require_user
     @user = User.find(params[:id])
 
     if @user.update
@@ -38,6 +40,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    require_user
     @user = User.find(params[:id])
     @user.destroy
 

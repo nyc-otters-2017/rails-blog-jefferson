@@ -12,4 +12,8 @@ module SessionsHelper
     !current_user.nil?
   end
 
+  def require_user
+    redirect_to new_user_path unless logged_in?
+  end
+
 end

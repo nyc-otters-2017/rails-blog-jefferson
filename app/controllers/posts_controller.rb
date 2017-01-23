@@ -5,10 +5,12 @@ class PostsController < ApplicationController
   end
 
   def new
+    require_user
     @post = Post.new
   end
 
   def create
+    require_user
     @post = current_user.articles.new(post_params)
 
     if @post.save
@@ -23,10 +25,12 @@ class PostsController < ApplicationController
   end
 
   def edit
+    require_user
     @post = Post.find(params[:id])
   end
 
   def update
+    require_user
     @post = Post.find(params[:id])
 
     if @post.update(post_params)
@@ -37,6 +41,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    require_user
     @post = Post.find(params[:id])
     @post.destroy
 
