@@ -12,3 +12,24 @@
 .user-container a, .user-container a:visited {
   color: #6E0500;
 }
+
+.user-form {
+  font-family: 'Raleway', sans-serif;
+  height: 500px;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 10%;
+  border: 2px solid #3E3E3E;
+}
+
+.user-form *:not(:last-child) {
+  border-radius: 5px;
+  display: block;
+  padding-left: 23%;
+  margin-top: 15px;
+  margin-left: 20%;
+}
+
+.user-form input[type=submit] {
+  margin-left: 40%;
+}
