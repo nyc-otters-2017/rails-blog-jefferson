@@ -1,7 +1,18 @@
-<%= @post.title %>
-<%= @post.article %>
+<h1><%= @post.title %></h1>
+<p><%= @post.article %></p>
 
 <% if current_user == @post.author %>
   <%= link_to 'Edit', edit_post_path(@post) %>
   <%= link_to 'Delete', post_path(@post), method: 'delete' %>
+<% end %>
+
+<% @post.comments.each do |comment| %>
+  <%= render 'comments/show' %>
+<% end %>
+
+<% if logged_in? %>
+  <h2>New Comment</h2>
+  <%= render 'comments/form' %>
+<% else %>
+  <h2><% link_to 'Login', new_user_path %> to leave a new comment</h2>
 <% end %>

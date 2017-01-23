@@ -1,0 +1,7 @@
+<% @users.each do |user| %>
+  <ul>
+    <h3><%= link_to user.name, user_path(user.id) %></h3>
+    <li><%= user.articles.count %></li>
+    <li><%= "Member since  #{user.created_at.strftime("%b %d '%y")}" %></li>
+  </ul>
+<% end %>

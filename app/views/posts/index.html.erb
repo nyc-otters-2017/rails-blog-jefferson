@@ -1,5 +1,4 @@
 <% @posts.each do |post| %>
-  <%= post.title %>
-  <%= post.article %>
-  <%= link_to post.author.name, user_path(post.author.id) %>
+  <p><%= link_to post.title, post_path(post.id) %></p>
+  <p><%= link_to post.author.name, user_path(post.author.id) %></p>
 <% end %>
