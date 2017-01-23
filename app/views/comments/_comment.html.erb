@@ -1,7 +1,9 @@
-<%= comment.user.name %>
-<%= comment.comment %>
+<ul>
+  <li><%= comment.user.name %></li>
+  <li><%= comment.comment %></li>
 
-<% if current_user == comment.user %>
-  <%= link_to 'Edit', edit_post_comment_path(@post) %>
-  <%= link_to 'Delete', post_comment_path(comment), method: 'delete' %>
-<% end %>
+  <% if current_user == comment.user %>
+    <li><%= link_to 'Edit', edit_post_comment_path(@post) %></li>
+    <li><%= link_to 'Delete', post_comment_path(comment), method: 'delete' %></li>
+  <% end %>
+</ul>
